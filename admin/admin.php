@@ -14,7 +14,9 @@
                 <a class="nav-link" href="#">My Gmap</a>
             </li>
             <li class="nav-item">
-                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
             </li>
         </ul>
     </div>
+
+    
