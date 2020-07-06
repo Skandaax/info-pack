@@ -17,8 +17,5 @@ add_action( 'admin_menu', 'ip_Add_My_Admin_Link');
      );
  }
 
- //Le fichier d'inclusion "admin.php", le template qui sera afficher dans le menu "Info-Pack"
- function Info_pack_admin_page() {
-    require_once ('/admin.php');
-}
+
 
