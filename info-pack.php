@@ -29,3 +29,5 @@ Copyright [2020] [Yannick_Couillin] [email : ameb@inforaz.com]
 // Inclut "ip-functions.php" en  utilisent require_once 
 require_once PLUGIN_DIR_path(__FILE__) . '/ip-function.php';
 
+
+
