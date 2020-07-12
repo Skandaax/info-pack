@@ -1,8 +1,17 @@
 <?php
 
 //La page ip-function.php regroupe toutes les fonctions principale de l'extension.*/
-//ici je vais mettre les code require_once pour unclure le fichier.
+//ici je vais mettre les codes require_once pour inclure le fichier.
 require_once PLUGIN_DIR_path(__FILE__) . 'includes/hook.php';
+
+//*********************************************************************************/
+//*********************************************************************************/
+//*********************************************************************************/
+
+//Cette fonction empêche l'utilisateur public d'accéder directement à vos fichiers .php via URL
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
  // Ajout d'un menu dans l'administration*/
  function ip_Add_My_Admin_Link() {
@@ -18,8 +27,8 @@ require_once PLUGIN_DIR_path(__FILE__) . 'includes/hook.php';
   function ip_add_sub_menu() {
     add_submenu_page(
        'info-pack/admin/admin.php', //lien du menu parent
-       'Réglage', //Titre de la page du sous menu
-       'Réglage', //Texte du lien du sous menu
+       'Réglages', //Titre de la page du sous menu
+       'Réglages', //Texte du lien du sous menu
        'manage_options', //Exigence de capacité pour voir le lien
        'info-pack/admin/admin.php', // Le 'slug' - fichier à afficher en cliquant sur le lien
     );

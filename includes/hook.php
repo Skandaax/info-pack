@@ -1,5 +1,10 @@
 <?php
 
+//Cette fonction empêche l'utilisateur public d'accéder directement à vos fichiers .php via URL
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 //Les hooks d'action de mon menu et sous menu de mon extension
 // J'ajoute un hook pour afficher mon menu principal de mon extention
 //J'utilise des hooks pour mon sous menu */
