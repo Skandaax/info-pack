@@ -8,8 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 //Cette page est la page principal  du réglage de l'extention Info-Pack
 // celle-ci regroupe la classe reglage et ses fonction qui vont servir pour
 //activer certain outils
-class reglages() {
-    Private $mygmap:
+class reglages {
+    Private $mygmap;
     private $mymails;
     private $plandesite;
 
@@ -21,5 +21,8 @@ class reglages() {
         
     }
 
+    Public function filter() {
+        
+    }
 
 }

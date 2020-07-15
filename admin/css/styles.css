@@ -3,3 +3,14 @@
     padding: 0;
 }
 
+#menu {
+    margin: 10px, 20px, 10px, 10px;
+}
+
+#menu a {
+    color: #0c6980;
+}
+
+#menu a:hover {
+    color: #ffa936;
+}
