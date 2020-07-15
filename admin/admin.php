@@ -8,7 +8,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-
 ?>
 
 <!doctype html>
@@ -25,8 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
   </head>
 
   <body>
-      <div id="border" class="wrap">
-        <h1>Réglages</h1>
+    <div id="border" class="wrap">
+        <h2>Réglages</h2>
         
         <form action="" methode="">
             <br>
