@@ -30,9 +30,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 Copyright [2020] [Yannick_Couillin] [email : ameb@inforaz.com]
 */
 
-//*********************************************************************************/
-//*********************************************************************************/
-//*********************************************************************************/
+//*******************************************************************************/
+//*******************************************************************************/
+//*******************************************************************************/
 
 //Cette fonction empêche l'utilisateur public d'accéder directement à vos fichiers .php via URL
 if ( ! defined( 'ABSPATH' ) ) {
@@ -42,11 +42,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 //Ici on va inclure les fichiers principaux du plugin
 // Inclut "ip-functions.php" en  utilisent require_once 
 require_once PLUGIN_DIR_path(__FILE__) . '/ip-function.php';
-// Inclut "plan_de_site.php" pour l'utilisation de l'outils Gmap
+// Inclut "reglage" pour l'utilisation du menu réglage
+require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/reglage.php';
+// Inclut "plan_de_site.php" pour l'utilisation de l'outils Plan de site
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/plan-de-site.php';
 // Inclut "my-gmap.php" pour l'utilisation de l'outils Gmap
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-gmap.php';
-// Inclut "reglage" pour l'utilisation du menu réglage
-require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/reglage.php';
+// Inclut "my-gmap.php" pour l'utilisation de l'outils My mails
+require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-mails.php';
 // Inclut "Filter" pour activez des outils dans le menu de l'administration
 require_once PLUGIN_DIR_path(__FILE__) . 'includes/filter.php';

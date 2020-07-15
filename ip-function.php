@@ -1,13 +1,12 @@
 <?php
 
+//*******************************************************************************/
+//***************************[function]******************************************/
+//*******************************************************************************/
+
 //La page ip-function.php regroupe toutes les fonctions principale de l'extension.*/
 //ici je vais mettre les codes require_once pour inclure le fichier.
 require_once PLUGIN_DIR_path(__FILE__) . 'includes/hook.php';
-
-
-//*******************************************************************************/
-//***************************[IP function]***************************************/
-//*******************************************************************************/
 
 //Cette fonction empêche l'utilisateur public d'accéder directement à vos fichiers .php via URL
 if ( ! defined( 'ABSPATH' ) ) {
