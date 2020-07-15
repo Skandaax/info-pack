@@ -38,9 +38,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 //Ici on va inclure les fichiers principaux du plugin
 // Inclut "ip-functions.php" en  utilisent require_once 
 require_once PLUGIN_DIR_path(__FILE__) . '/ip-function.php';
+// Inclut "plan_de_site.php" pour l'utilisation de l'outils Gmap
+require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/plan-de-site.php';
 // Inclut "my-gmap.php" pour l'utilisation de l'outils Gmap
-require_once PLUGIN_DIR_path(__FILE__) . '/admin/includes/my-gmap.php';
-
+require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-gmap.php';
 
 
 
