@@ -45,7 +45,7 @@ require_once PLUGIN_DIR_path(__FILE__) . '/ip-function.php';
 // Inclut "reglage" pour l'utilisation du menu réglage
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/reglage.php';
 // Inclut "plan_de_site.php" pour l'utilisation de l'outils Plan de site
-require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/plan-de-site.php';
+require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-plan.php';
 // Inclut "my-gmap.php" pour l'utilisation de l'outils Gmap
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-gmap.php';
 // Inclut "my-gmap.php" pour l'utilisation de l'outils My mails

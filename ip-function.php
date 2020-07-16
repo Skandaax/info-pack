@@ -60,9 +60,9 @@ function ip_add_sub_menu_mails() {
 function ip_add_sub_menu_plan() {
     add_submenu_page(
        'info-pack/admin/admin.php', //lien du menu parent
-       'Plan de site', //Titre de la page du sous menu
-       'Plan de site',//Texte du lien du sous menu
+       'My Plan', //Titre de la page du sous menu
+       'My Plan',//Texte du lien du sous menu
        'manage_options', //Exigence de capacité pour voir le lien
-       'info-pack/admin/templates/t-plan-de-site.php', // Le 'slug' - fichier à afficher en cliquant sur le lien
+       'info-pack/admin/templates/t-my-plan.php', // Le 'slug' - fichier à afficher en cliquant sur le lien
     );
 }

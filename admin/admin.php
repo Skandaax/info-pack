@@ -29,13 +29,13 @@ if ( ! defined( 'ABSPATH' ) ) {
         
         <form action="" methode="">
             <br>
-                <input type="checkbox" name="checkbox" id="checkbox"> 
+                <input type="checkbox" name="gmap" id="gmap"> 
                 <label for="checkox">Activez My Gmap</label>
             <br>
-                <input type="checkbox" name="checkbox" id="checkbox"> 
+                <input type="checkbox" name="mails" id="mails"> 
                 <label for="checkox">Activez My mails</label>
             <br>
-                <input type="checkbox" name="checkbox" id="checkbox"> 
+                <input type="checkbox" name="plan" id="plan"> 
                 <label for="checkox">Activez Plan de site</label>
             <br>
             <div>

@@ -1,7 +1,7 @@
 <?php
 
 //*******************************************************************************/
-//***************************[plan_du_site]**************************************/
+//***************************[My_Plan]**************************************/
 //*******************************************************************************/
 //Cette fonction empêche l'utilisateur public d'accéder directement à vos 
 //fichiers .php via URL
@@ -11,9 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 //Cette fonction sert à relier le fichier CSS au shortcode [plan_du_menu]
 function add_css() {
-    wp_register_style('plan_menu', plugins_url('../css/styles.css', __FILE__));
-    wp_enqueue_style('plan_menu');
+    wp_register_style('info_pack', plugins_url('../css/styles.css', __FILE__));
+    wp_enqueue_style('info_pack');
 }
+add_action( 'wp_enqueue_scripts', 'add_css' );
 
 // Fonction qui va permettre d'afficher le menu en lien textuel.
 function Plan_Menu( $atts, $content=null) {
@@ -50,7 +51,7 @@ function Plan_Menu( $atts, $content=null) {
 add_shortcode('plan_du_menu', 'Plan_Menu');
 
 //*******************************************************************************/
-// Fonction qui va me permettre d'afficher le les catégories d'aticles.
+// Fonction qui va me permettre d'afficher les récents aticles.
 function categorie($atts, $content=null) {
     ob_start();
 
@@ -59,30 +60,33 @@ function categorie($atts, $content=null) {
     extract(shortcode_atts(array(
         'numberposts' => 5, //Nombre de méssages à récuperer
         'category' => 0, //ID de catégories ou liste d'ID séparé par des virgules.
-        'orderby' => 'date', //
-        'order' => 'DESC',
-        'post_type' => 'post',
+        'orderby' => 'date', // Organisé par date
+        'post_type' => 'post', //Type de post(articles)
+
     ), $atts, 'categorie'));
 
     global $post;
     $tmp_post = $post;
-    $myposts = get_posts('showposts=' .$numberposts.'$orderby'.'&category='.$category);
-    $out = '<ul>';
+    $myposts = get_posts('showposts=' .$numberposts.'$orderby='.$orderby.'$post_type='.$post_type.'&category='.$category);
+    $a = '<ul>';
     foreach($myposts as $post); {
         setup_postdata($post); 
 
-        $out .= '<li><h3><a href="'.get_permalink().'">'.the_title('','',false).'</a></h3></li>';
-        $out .= '<a href="'.get_permalink().'">'.get_the_post_thumbnail($id ='', $attr = '').'</a>';
-        $out .= get_post_type($post->ID);
-        $out .='<p><a href="'.get_permalink().'">Lire la suite... </a></p>';
-        $out .= '<hr />';
-        $out .= '</li>';
+        //Les articles récents vont s'afficher dans le template ci-dessous
+        $a .= '<li><h3><a href="'.get_permalink().'">'.the_title('','',false).'</a></h3></li>';
+        $a .= '<a href="'.get_permalink().'">'.get_the_post_thumbnail($id = null, $attr = '' ).'</a>';
+        $a .= get_the_excerpt();
+        $a .='<p><a href="'.get_permalink().'">Lire la suite... </a></p>';
+        $a .= '<hr />';
+        $a .= '</li>';
 
     };
     wp_reset_postdata();
     $post = $tmp_post;
-    return $out;  
+    return $a;  
 
 }
 
+//Sortcode a mettre dans l'une des pages de son site ou dans un widget pour faire apparaitre Les récents articles
+//[articles]
 add_shortcode('articles', 'categorie');
