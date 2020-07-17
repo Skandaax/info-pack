@@ -31,10 +31,9 @@ function fil_ariane($atts, $content = null) {
         $fil.= get_bloginfo('name');
         $fil.= '</a>';
 
-        $parents = array_reverse(get_ancestors($_POST->ID,'page'));
+        $parents = array_reverse(get_ancestors($post->ID,'page'));
         foreach($parents as $parent) {
             $fil.='<a href="' .get_permalink($parent) .'">';
-            var_dump($fil);
             $fil.= get_the_title($parent);
             $fil.= '</a>';
         }
