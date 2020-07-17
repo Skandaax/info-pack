@@ -17,20 +17,20 @@
 <div class="wrap">
   <h2>My Plan</h2>
   <br>
-  
+    <h4><strong>Pour l'utilisation de l'extension : </strong></h4>
     <h4><strong>Menu</strong></h4>
     <p>
       Shortcode qui vous permets d'afficher les liens textuels du menu sans hierarchie
-      [plan_du_menu] .
+       <input type="text" value="[plan_du_menu]" readonly="readonly" />
     </p>
 </div>
-<br>
 <div class="wrap">
     <h4><strong>Articles</strong></h4>
     <p>
       Shortcode qui vous permets d'afficher les récents articles
-      [Articles] .
+      <input type="text" value="[Articles]" readonly="readonly" />
     </p>
 </div>
+
 </body>
 </html>

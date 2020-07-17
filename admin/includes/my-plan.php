@@ -17,7 +17,7 @@ function add_css() {
 add_action( 'wp_enqueue_scripts', 'add_css' );
 
 // Fonction qui va permettre d'afficher le menu en lien textuel.
-function Plan_Menu( $atts, $content=null) {
+function Plan_Menu( $atts, $content = null) {
     ob_start();
 
     //je recupere les parametres du shortcode
@@ -33,7 +33,7 @@ function Plan_Menu( $atts, $content=null) {
         ?>
         <div class="wrap" id="menu">
         <?php
-        $menu .= '<h3>'.__('Menu'). '</h3>'; //Titre du paragraphe
+        $menu .= '<h3>'.__(''). '</h3>'; //Titre du paragraphe
         $menu .= '<ul>'; // Ouverture des balises ul
         $menu .= wp_list_pages('title_li=&echo=0'); //Insertion du menu principal avec insertion de puces
         $menu .= '</ul>'; // Fermeture des balises ul
@@ -52,7 +52,7 @@ add_shortcode('plan_du_menu', 'Plan_Menu');
 
 //*******************************************************************************/
 // Fonction qui va me permettre d'afficher les récents aticles.
-function categorie($atts, $content=null) {
+function categorie($atts, $content = null) {
     ob_start();
 
     //je recupere les parametres du shortcode
