@@ -48,7 +48,7 @@ add_shortcode('plan_du_menu', 'Plan_Menu');
 
 //*******************************************************************************/
 // Fonction qui va me permettre d'afficher les aticles. par cétégories
-function cat($atts, $content = null) {
+function list_post($atts, $content = null) {
     ob_start();
 
     //je recupere les parametres du shortcode
@@ -59,7 +59,7 @@ function cat($atts, $content = null) {
         'orderby' => 'date', // Organisé par date
         'post_type' => 'post', //Type de post(articles)
 
-    ), $atts, 'cat'));
+    ), $atts, 'list_post'));
 
     //Définie le tableau d'argument d'une requête
     $args = array(
@@ -87,7 +87,7 @@ return $output ?? '<strong>Sorry. No posts matching your criteria!</strong>';
 
 //Sortcode a mettre dans l'une des pages de son site ou dans un widget pour faire apparaitre La liste d'articles
 //[articles]
-add_shortcode('post', 'cat');
+add_shortcode('post', 'list_post');
 
 //*******************************************************************************/
 // Fonction qui va me permettre d'afficher les récents aticles.
