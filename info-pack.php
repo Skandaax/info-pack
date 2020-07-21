@@ -54,3 +54,9 @@ require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-gmap.php';
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-mails.php';
 // Inclut "Filter" pour activez des outils dans le menu de l'administration
 require_once PLUGIN_DIR_path(__FILE__) . 'includes/filter.php';
+
+//Cette fonction sert à relier le fichier CSS aux shortcodes !
+function add_css() {
+    wp_register_style('info_pack', plugins_url('../css/styles.css', __FILE__));
+    wp_enqueue_style('info_pack');
+}

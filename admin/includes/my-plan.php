@@ -9,11 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-//Cette fonction sert à relier le fichier CSS au shortcode [plan_du_menu]
-function add_css() {
-    wp_register_style('info_pack', plugins_url('../css/styles.css', __FILE__));
-    wp_enqueue_style('info_pack');
-}
+
 add_action( 'wp_enqueue_scripts', 'add_css' );
 
 // Fonction qui va permettre d'afficher le menu en lien textuel.
@@ -49,6 +45,49 @@ function Plan_Menu( $atts, $content = null) {
 //Sortcode a mettre dans l'une des pages de son site pour faire apparaitre le plan du menu
 //[plan_du_menu]
 add_shortcode('plan_du_menu', 'Plan_Menu');
+
+//*******************************************************************************/
+// Fonction qui va me permettre d'afficher les aticles. par cétégories
+function cat($atts, $content = null) {
+    ob_start();
+
+    //je recupere les parametres du shortcode
+    
+    extract(shortcode_atts(array(
+        'numberposts' => 0, //Nombre de méssages à récuperer
+        'category' => 0, //ID de catégories ou liste d'ID séparé par des virgules.
+        'orderby' => 'date', // Organisé par date
+        'post_type' => 'post', //Type de post(articles)
+
+    ), $atts, 'cat'));
+
+    //Définie le tableau d'argument d'une requête
+    $args = array(
+        'numberposts' => $numberposts,
+        'post_type' => $post_type
+    );
+
+    $custom_posts = get_posts($args);
+
+    //Template et conditions pour afficher la liste d'articles
+    if( ! empty( $custom_posts ) ){
+		$output = '<ul>';
+		foreach ( $custom_posts as $p ){
+
+			$output .= '<li><a href="' 
+			. get_permalink( $p->ID ) . '">' 
+			. $p->post_title . '</a> ' . '</li>';
+		}
+
+		$output .= '</ul>';
+	}
+
+return $output ?? '<strong>Sorry. No posts matching your criteria!</strong>';
+}
+
+//Sortcode a mettre dans l'une des pages de son site ou dans un widget pour faire apparaitre La liste d'articles
+//[articles]
+add_shortcode('post', 'cat');
 
 //*******************************************************************************/
 // Fonction qui va me permettre d'afficher les récents aticles.

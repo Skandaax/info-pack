@@ -25,10 +25,17 @@
     </p>
 </div>
 <div class="wrap">
-    <h4><strong>Articles</strong></h4>
+    <h4><strong>Liste d'articles</strong></h4>
+    <p>
+      Shortcode qui vous permets d'afficher un liste d'articles
+      <input type="text" value="[post]" readonly="readonly" />
+    </p>
+</div>
+<div class="wrap">
+    <h4><strong>Articles récents</strong></h4>
     <p>
       Shortcode qui vous permets d'afficher les récents articles
-      <input type="text" value="[Articles]" readonly="readonly" />
+      <input type="text" value="[articles]" readonly="readonly" />
     </p>
 </div>
 

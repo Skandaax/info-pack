@@ -15,18 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 class reglages {
     Private $mygmap;
     private $mymails;
-    private $plandesite;
+    private $plan;
+    private $reglage;
+    private $breadcrumb;
 
-    Public function Active() {
 
-    }
-
-    Public function Save() {
-        
-    }
-
-    Public function filter() {
-        
+    function Active_reglage() {
     }
 
 }

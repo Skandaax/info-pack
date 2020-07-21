@@ -60,8 +60,8 @@ function ip_add_sub_menu_maps() {
 function ip_add_sub_menu_mails() {
     add_submenu_page(
        'info-pack/admin/admin.php', //lien du menu parent
-       'My mails', //Titre de la page du sous menu
-       'My mails', //Texte du lien du sous menu
+       'My Mails', //Titre de la page du sous menu
+       'My Mails', //Texte du lien du sous menu
        'manage_options', //Exigence de capacité pour voir le lien
        'info-pack/admin/templates/t-my-mails.php', // Le 'slug' - fichier à afficher en cliquant sur le lien
     );
