@@ -13,10 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 //J'utilise des hooks pour mon sous menu */
 add_action('admin_menu', 'ip_Add_My_Admin_Link');
 add_action('admin_menu', 'ip_add_sub_menu');
-add_action('admin_menu', 'ip_add_sub_menu_bread');
-add_action('admin_menu', 'ip_add_sub_menu_maps');
-add_action('admin_menu', 'ip_add_sub_menu_mails');
-add_action('admin_menu', 'ip_add_sub_menu_plan');
+add_action('admin_menu', 'support');
 
+//J'ajoute un hook pour donner un style à ma page réglage
+add_action('wp_enqueue_scripts', 'add_css');
 
 

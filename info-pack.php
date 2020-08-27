@@ -48,15 +48,17 @@ require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/reglage.php';
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-breadcrumb.php';
 // Inclut "plan_de_site.php" pour l'utilisation de l'outils Plan de site
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-plan.php';
-// Inclut "my-gmap.php" pour l'utilisation de l'outils Gmap
-require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-gmap.php';
+// Inclut "my-gmap.php" pour l'utilisation de l'outils post (articles)
+require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-post.php';
 // Inclut "my-gmap.php" pour l'utilisation de l'outils My mails
-require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-mails.php';
+require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-ip.php';
 // Inclut "Filter" pour activez des outils dans le menu de l'administration
 require_once PLUGIN_DIR_path(__FILE__) . 'includes/filter.php';
 
 //Cette fonction sert à relier le fichier CSS aux shortcodes !
-function add_css() {
-    wp_register_style('info_pack', plugins_url('../css/styles.css', __FILE__));
-    wp_enqueue_style('info_pack');
-}
+function add_css(){ 
+    wp_register_style('styles', plugins_url('css/styles.css', __FILE__)); 
+    wp_enqueue_style('styles');  
+   }
+
+
