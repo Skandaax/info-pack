@@ -15,7 +15,5 @@ add_action('admin_menu', 'ip_Add_My_Admin_Link');
 add_action('admin_menu', 'ip_add_sub_menu');
 add_action('admin_menu', 'support');
 
-//J'ajoute un hook pour donner un style à ma page réglage
-add_action('wp_enqueue_scripts', 'add_css');
 
 

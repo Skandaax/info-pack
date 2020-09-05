@@ -7,7 +7,7 @@
 
 Plugin Name: Info-Pack
 Plugin URI: https://www.inforaz.com/developpement-web-web-mobile/
-Description: Extention WordPress permettant l'utilisation de plusieurs outils : Plan de site, création de carte Google maps, récupérer des adresses mail...
+Description: Extention WordPress permettant l'utilisation de plusieurs outils : Plan de site, articles récents, afficher une liste d'articles, montrer au visiteur son adresse IP...
 Author: Couillin Yannick
 Author URI: http:/www.inforaz.com/
 Version: 1.0
@@ -45,7 +45,7 @@ require_once PLUGIN_DIR_path(__FILE__) . '/ip-function.php';
 // Inclut "reglage" pour l'utilisation du sous menu réglage
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/reglage.php';
 // Inclut "reglage" pour l'utilisation de l'outils My Breadcrumb
-require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-breadcrumb.php';
+// require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-breadcrumb.php';
 // Inclut "plan_de_site.php" pour l'utilisation de l'outils Plan de site
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-plan.php';
 // Inclut "my-gmap.php" pour l'utilisation de l'outils post (articles)
@@ -60,5 +60,3 @@ function add_css(){
     wp_register_style('styles', plugins_url('css/styles.css', __FILE__)); 
     wp_enqueue_style('styles');  
    }
-
-

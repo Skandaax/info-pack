@@ -23,7 +23,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrapcss" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <title>Options</title>
@@ -33,14 +32,14 @@ if ( ! defined( 'ABSPATH' ) ) {
     <br>
 <nav>
     <ul class="nav nav-tabs">
-        <li class="nav-item">
+    <li class="nav-item">
             <a href="#general" class="nav-link active" data-toggle="tab">Général</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a href="#breadcrumb" class="nav-link" data-toggle="tab">My Breadcrumb</a>
-        </li>
+        </li> -->
         <li class="nav-item">
-            <a href="#ip" class="nav-link" data-toggle="tab">My Ip</a>
+            <a href="#ip" class="nav-link " data-toggle="tab">My Ip</a>
         </li>
         <li class="nav-item">
             <a href="#post" class="nav-link" data-toggle="tab">My Post</a>
@@ -53,9 +52,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="tab-content" class="wrap">
     <div class="tab-pane fade show active" id="general">
-        <p></p>
+        <br>
+        <p>Passer à l'onglet suivant !</p>
     </div>
-    <div class="tab-pane fade" id="breadcrumb">
+    <!-- <div class="tab-pane fade" id="breadcrumb">
         <br>
             <h2>My breadcrumb (fil d'Ariane)</h2>
         <br>
@@ -80,13 +80,13 @@ if ( ! defined( 'ABSPATH' ) ) {
                 ou utilisez le shortcode : 
                 <input type="text" value="[my_breadcrumb]" readonly="readonly" />
             </p>
-    </div>
+    </div> -->
     <div class="tab-pane fade" id="ip">
         <br>
             <h2>My Ip</h2>
             <br>
                 <p>
-                    <strong>Pour l'utilisation cet outil : </strong>
+                    <strong>Pour l'utilisation de cet outil : </strong>
                 </p>
                 <p>
                     <strong>Montrer l'IP du visiteur</strong>
@@ -100,7 +100,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <br>
     <h2>My Post</h2>
         <br>
-            <p><strong>Pour l'utilisation cet outil : </strong></p>
+            <p><strong>Pour l'utilisation de ces outils : </strong></p>
             <p><strong>Liste d'articles</strong></p>
         <p>
             Shortcode qui vous permets d'afficher un liste d'articles
@@ -116,7 +116,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <br>
             <h2>My Plan</h2>
         <br>
-            <p><strong>Pour l'utilisation cet outil : </strong></p>
+            <p><strong>Pour l'utilisation de cet outil : </strong></p>
             <p><strong>Menu</strong></p>
         <p>
             Shortcode qui vous permets d'afficher les liens textuels du menu 
