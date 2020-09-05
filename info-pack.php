@@ -44,13 +44,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once PLUGIN_DIR_path(__FILE__) . '/ip-function.php';
 // Inclut "reglage" pour l'utilisation du sous menu réglage
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/reglage.php';
-// Inclut "reglage" pour l'utilisation de l'outils My Breadcrumb
-// require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-breadcrumb.php';
-// Inclut "plan_de_site.php" pour l'utilisation de l'outils Plan de site
+// Inclut "plan_de_site.php" pour l'utilisation de l'outils My PLAN (plan de site)
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-plan.php';
-// Inclut "my-gmap.php" pour l'utilisation de l'outils post (articles)
+// Inclut "my-post.php" pour l'utilisation de l'outils de My POST(articles)
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-post.php';
-// Inclut "my-gmap.php" pour l'utilisation de l'outils My mails
+// Inclut "my-gmap.php" pour l'utilisation de l'outils de My IP
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-ip.php';
 // Inclut "Filter" pour activez des outils dans le menu de l'administration
 require_once PLUGIN_DIR_path(__FILE__) . 'includes/filter.php';
