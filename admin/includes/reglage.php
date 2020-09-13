@@ -13,11 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 // celle-ci regroupe la classe reglage et ses fonction qui vont servir pour
 //activer certain outils
 class reglages {
-    Private $mygmap;
-    private $mymails;
+    Private $myPOST;
+    private $IP;
     private $plan;
-    private $reglage;
-    private $breadcrumb;
+    private $general;
 
 
     function Active_reglage() {

@@ -1,7 +1,7 @@
 <?php
 
 //*******************************************************************************/
-//***************************[My Gmap]*******************************************/
+//***************************[My POST]*******************************************/
 //*******************************************************************************/
 
 //Cette fonction empêche l'utilisateur public d'accéder directement à vos fichiers .php via URL
@@ -17,7 +17,7 @@ function list_post($atts, $content = null) {
     //je recupere les parametres du shortcode
     
     extract(shortcode_atts(array(
-        'numberposts' => 23, //Nombre de post à récuperer
+        'numberposts' => 16, //Nombre de post à récuperer
         'category' => 0, //ID de catégories ou liste d'ID séparé par des virgules.
         'orderby' => 'date', // Organisé par date
         'post_type' => 'post', //Type de post(articles)
