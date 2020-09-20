@@ -7,7 +7,7 @@
 
 Plugin Name: Info-Pack
 Plugin URI: https://www.inforaz.com/developpement-web-web-mobile/
-Description: Extention WordPress permettant l'utilisation de plusieurs outils : Plan de site, articles récents, afficher une liste d'articles, montrer au visiteur son adresse IP...
+Description: Extension WordPress permettant l'utilisation de plusieurs outils : Plan de site, articles récents, afficher une liste d'articles, montrer au visiteur son adresse IP...
 Author: Couillin Yannick
 Author URI: http:/www.inforaz.com/
 Version: 1.0

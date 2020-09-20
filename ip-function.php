@@ -44,7 +44,7 @@ function support() {
     );
 }
 
-//Je supprime les menus que je ne vais pas utiliser dans WorPress
+//Je supprime les menus que je ne vais pas utiliser dans WordPress
 function remove_admin_menus() {
     remove_menu_page( 'edit.php?post_type=project' ); //Supprimer menu Projets ddu back office de Wordpress
     remove_menu_page( 'edit.php?post_type=feedback' ); //Supprimer menu Feedback ddu back office de Wordpress
