@@ -8,7 +8,9 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description == 
-Extension WordPress permettant l'utilisation de plusieurs outils : Plan de site , articles récents , afficher une liste d' articles , montrer au visiteur son adresse IP .  
+Extension WordPress permettant l'utilisation de plusieurs outils : 
+Plan de site , articles récents , afficher une liste d' articles , 
+montrer au visiteur son adresse IP .  
   
 == Installation == 
 1 / Télécharger le dossier de l'extension dans le répertoire  wp - contenu / plugins . 

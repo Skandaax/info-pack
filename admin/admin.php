@@ -35,17 +35,17 @@ if ( ! defined( 'ABSPATH' ) ) {
     <li class="nav-item">
             <a href="#general" class="nav-link active" data-toggle="tab">Général</a>
         </li>
-        <!-- <li class="nav-item">
-            <a href="#breadcrumb" class="nav-link" data-toggle="tab">My Breadcrumb</a>
-        </li> -->
         <li class="nav-item">
-            <a href="#ip" class="nav-link " data-toggle="tab">My Ip</a>
+            <a href="#ip" class="nav-link " data-toggle="tab">Hardware</a>
         </li>
         <li class="nav-item">
-            <a href="#post" class="nav-link" data-toggle="tab">My Post</a>
+            <a href="#post" class="nav-link" data-toggle="tab">Publication</a>
         </li>
         <li class="nav-item">
-            <a href="#plan" class="nav-link" data-toggle="tab">My Plan</a>
+            <a href="#breadcrumb" class="nav-link" data-toggle="tab">Fil d'Ariane</a>
+        </li>
+        <li class="nav-item">
+            <a href="#plan" class="nav-link" data-toggle="tab">Plan de site</a>
         </li>
     </ul>
 </nav>
@@ -55,7 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <br>
         <p>Passer à l'onglet suivant !</p>
     </div>
-    <!-- <div class="tab-pane fade" id="breadcrumb">
+    <div class="tab-pane fade" id="breadcrumb">
         <br>
             <h2>My breadcrumb (fil d'Ariane)</h2>
         <br>
@@ -80,7 +80,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 ou utilisez le shortcode : 
                 <input type="text" value="[my_breadcrumb]" readonly="readonly" />
             </p>
-    </div> -->
+    </div>
     <div class="tab-pane fade" id="ip">
         <br>
             <h2>My Ip</h2>
