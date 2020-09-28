@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="<?php
-
+    
 //****Bootstrap JS****
 wp_register_script('prefix_bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js');
 wp_enqueue_script('prefix_bootstrap');
@@ -31,12 +31,12 @@ wp_enqueue_style('prefix_bootstrap');
  
 ?>"  type="text/css" media="all"/>
 
-    <title>Options</title>
+    <title>Shortcodes</title>
   </head>
 
 <body>
     
-<h3 class="wrap">Options</h3>
+<h3 class="wrap">Shortcodes</h3>
     <hr>
 
 <nav class="wrap">
@@ -58,19 +58,55 @@ wp_enqueue_style('prefix_bootstrap');
 
 <div class="tab-content" class="wrap">
     <div class="tab-pane fade show active" id="general">
-
+        <br>
+        <p>Le terme de shortcode peut être traduit en français par 
+        « code court » ou « bout de code ». Il s'agit d'une balise propre
+         à WordPress qui est notée entre crochet.
+        </p>
     </div>
     <div class="tab-pane fade" id="ip">
-
+        <br>
+            <h2>My Ip</h2>
+            <br>
+                <p>
+                    <strong>Pour l'utilisation de cet outil : </strong>
+                </p>
+                <p>
+                    <strong>Montrer l'IP du visiteur</strong>
+                </p>
+                <p>
+            Shortcode qui vous permet d'afficher l'IP du visiteur
+            <input type="text" value="[my_ip]" readonly="readonly" />
+        </p>
     </div>
     <div class="tab-pane fade" id="post">
-
+        <br>
+    <h2>My Post</h2>
+        <br>
+        <p><strong>Pour l'utilisation de ces outils : </strong></p>
+        <p><strong>Liste d'articles</strong></p>
+        <p>
+            Shortcode qui vous permet d'afficher un liste d'articles
+            <input type="text" value="[post]" readonly="readonly" />
+        </p>
+            <p><strong>Articles récents</strong></p>
+        <p>
+            Shortcode qui vous permet d'afficher les récents articles
+            <input type="text" value="[my_post]" readonly="readonly" />
+        </p>
     </div>
     <div class="tab-pane fade" id="plan">
-
+        <br>
+            <h2>My Plan</h2>
+        <br>
+            <p><strong>Pour l'utilisation de cet outil : </strong></p>
+            <p><strong>Menu</strong></p>
+        <p>
+            Shortcode qui vous permet d'afficher les liens textuels du menu 
+            <input type="text" value="[plan_du_menu]" readonly="readonly" />
+        </p>
     </div>
 </div>
 
 </body>
 </html>
-    

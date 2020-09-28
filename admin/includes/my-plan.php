@@ -9,9 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-
-add_action( 'wp_enqueue_scripts', 'add_css' );
-
 // Fonction qui va permettre d'afficher le menu en lien textuel.
 function Plan_Menu( $atts, $content = null) {
     ob_start();

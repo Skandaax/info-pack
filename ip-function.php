@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
  // Ajout d'un menu dans l'administration*/
- function ip_Add_My_Admin_Link() {
+ function ip_admin_Add_My_Admin_Link() {
      add_menu_page (
         'Info-Pack', //Titre de la page
         'Info-Pack', //Texte du lien du menu
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  }
 
 // AJout d'un sous menu réglage, dans l'extention Info-Pack*/
-  function ip_add_sub_menu() {
+  function ip_option_add_sub_menu() {
     add_submenu_page(
        'info-pack/admin/admin.php', //lien du menu parent
        'Options', //Titre de la page du sous menu
@@ -37,7 +37,18 @@ if ( ! defined( 'ABSPATH' ) ) {
     );
 }
 
-function support() {
+// AJout d'un sous menu réglage, dans l'extention Info-Pack*/
+function ip_shortcodes__add_sub_menu() {
+    add_submenu_page(
+       'info-pack/admin/admin.php', //lien du menu parent
+       'Shortcodes', //Titre de la page du sous menu
+       'Shortcodes', //Texte du lien du sous menu
+       'manage_options', //Exigence de la capacité pour voir le lien
+       'info-pack/admin/shortcodes.php' // Le 'slug' - fichier à afficher en cliquant sur le lien
+    );
+}
+
+function ip_support__add_sub_menu() {
     add_submenu_page(
        'info-pack/admin/admin.php', //lien du menu parent
        'Support', //Titre de la page du sous menu
@@ -53,7 +64,7 @@ function remove_admin_menus() {
     remove_menu_page( 'edit.php?post_type=feedback' ); //Supprimer menu Feedback (DIVI) du back office de Wordpress
 }
 
-//Je supprime les Widgets qui ne servent pas
+// //Je supprime les Widgets qui ne servent pas
 function wpm_remove_default_widgets() {
     unregister_widget( 'WP_Widget_Recent_Comments' ); // Le widget Commentaires récents
 }
