@@ -1,12 +1,12 @@
 <?php
 
-//*******************************************************************************/
-//***************************[My ip]******************************************/
-//*******************************************************************************/
+//-------------------------------------------------------------------------------/
+//--------------------------------[My ip]----------------------------------------/
+//-------------------------------------------------------------------------------/
 
-/* affichage simple de l' adresse IP du visiteur */
-//-- Fonction de récupération de l'adresse IP du visiteur
-//-- Shortcode : [my_ip]
+//--- affichage simple de l' adresse IP du visiteur
+//--- Fonction de récupération de l'adresse IP du visiteur
+//--- Shortcode : [my_ip]
 function ip_client($atts, $content = null){
 	if (isset($_SERVER['HTTP_CLIENT'])) {
 		$ip = $_SERVER['HTTP_CLIENT'];

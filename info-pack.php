@@ -1,10 +1,10 @@
 <?php
 
-//*******************************************************************************/
-//***************************[Info-Pack]*****************************************/
-//*******************************************************************************/
-/*
+//------------------------------------------------------------------------------//
+//-----------------------------[Info-Pack]--------------------------------------//
+//------------------------------------------------------------------------------//
 
+/*
 Plugin Name: Info-Pack
 Plugin URI: https://www.inforaz.com/developpement-web-web-mobile/
 Description: Extension WordPress permettant l'utilisation de plusieurs outils : Plan de site, articles récents, afficher une liste d'articles, montrer au visiteur son adresse IP...
@@ -30,25 +30,23 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 Copyright [2020] [Yannick_Couillin] [email : ameb@inforaz.com]
 */
 
-//*******************************************************************************/
-//*******************************************************************************/
-//*******************************************************************************/
+//------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------//
 
-//Cette fonction empêche l'utilisateur public d'accéder directement à vos fichiers .php via URL
+//--- Cette fonction empêche l'utilisateur public d'accéder directement à vos fichiers .php via URL
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-//Ici on va inclure les fichiers principaux du plugin
-// Inclut "ip-functions.php" en  utilisent require_once 
+//--- Ici on va inclure les fichiers principaux du plugin
+//--- Inclut "ip-functions.php" en  utilisent require_once 
 require_once PLUGIN_DIR_path(__FILE__) . '/ip-function.php';
-// Inclut "reglage" pour l'utilisation du sous menu réglage
-require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/reglage.php';
-// Inclut "plan_de_site.php" pour l'utilisation de l'outils My PLAN (plan de site)
+//--- Inclut "plan_de_site.php" pour l'utilisation de l'outils My PLAN (plan de site)
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-plan.php';
-// Inclut "my-post.php" pour l'utilisation de l'outils de My POST(articles)
+//--- Inclut "my-post.php" pour l'utilisation de l'outils de My POST(articles)
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-post.php';
-// Inclut "my-gmap.php" pour l'utilisation de l'outils de My IP
+//--- Inclut "my-gmap.php" pour l'utilisation de l'outils de My IP
 require_once PLUGIN_DIR_path(__FILE__) . 'admin/includes/my-ip.php';
-// Inclut "Filter" pour activez des outils dans le menu de l'administration
+//--- Inclut "Filter" pour activez des outils dans le menu de l'administration
 require_once PLUGIN_DIR_path(__FILE__) . 'includes/filter.php';

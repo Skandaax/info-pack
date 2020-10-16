@@ -1,19 +1,21 @@
 <?php
 
-//*******************************************************************************/
-//***************************[function]******************************************/
-//*******************************************************************************/
+//-------------------------------------------------------------------------------//
+//-----------------------------[function]----------------------------------------//
+//-------------------------------------------------------------------------------//
 
-//La page ip-function.php regroupe toutes les fonctions principale de l'extension.*/
-//ici je vais mettre les codes require_once pour inclure le fichier.
+//--- La page ip-function.php regroupe toutes les fonctions principale de l'extension.
+//--- ici je vais mettre les codes require_once pour inclure le fichier.
 require_once PLUGIN_DIR_path(__FILE__) . 'includes/hook.php';
 
-//Cette fonction empêche l'utilisateur public d'accéder directement à vos fichiers .php via URL
+//--- Cette fonction empêche l'utilisateur public d'accéder directement à vos fichiers .php via URL
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
- // Ajout d'un menu dans l'administration*/
+//*** Menu de l'administration Wordpress ***//
+
+ //--- Ajout d'un menu dans l'administration
  function ip_admin_Add_My_Admin_Link() {
      add_menu_page (
         'Info-Pack', //Titre de la page
@@ -26,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
      );
  }
 
-// AJout d'un sous menu réglage, dans l'extention Info-Pack*/
+//--- AJout d'un sous menu réglage, dans l'extention Info-Pack
   function ip_option_add_sub_menu() {
     add_submenu_page(
        'info-pack/admin/admin.php', //lien du menu parent
@@ -37,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     );
 }
 
-// AJout d'un sous menu réglage, dans l'extention Info-Pack*/
+//--- AJout d'un sous menu réglage, dans l'extention Info-Pack
 function ip_shortcodes__add_sub_menu() {
     add_submenu_page(
        'info-pack/admin/admin.php', //lien du menu parent
@@ -48,6 +50,7 @@ function ip_shortcodes__add_sub_menu() {
     );
 }
 
+//--- AJout d'un sous menu support, dans l'extention Info-Pack
 function ip_support__add_sub_menu() {
     add_submenu_page(
        'info-pack/admin/admin.php', //lien du menu parent
@@ -58,14 +61,31 @@ function ip_support__add_sub_menu() {
     );
 }
 
-//Je supprime les menus que je ne vais pas utiliser dans WordPress
+//*** Sécurité  ***//
+
+//--- Rendre invisible la version de Wordpress
+function remove_version_wordpress() {
+    remove_action('wp_head', 'wp_generator'); //Supprime la version de Wordpress
+}
+
+//--- Empêche le flux RSS d’afficher la version WordPress
+function wpt_remove_version() {
+return ''; }
+add_filter('the_generator', 'wpt_remove_version');
+
+//*** Supprimer les menus de l'administration de Wordpress ****//
+
+//--- Je supprime les menus que je ne vais pas utiliser dans WordPress
 function remove_admin_menus() {
     remove_menu_page( 'edit.php?post_type=project' ); //Supprimer menu Projets (DIVI) du back office de Wordpress
     remove_menu_page( 'edit.php?post_type=feedback' ); //Supprimer menu Feedback (DIVI) du back office de Wordpress
 }
 
-// //Je supprime les Widgets qui ne servent pas
+//*** Désactivation des Widgets ***//
+
+//--- Je supprime les Widgets qui ne servent pas
 function wpm_remove_default_widgets() {
     unregister_widget( 'WP_Widget_Recent_Comments' ); // Le widget Commentaires récents
 }
+
 
